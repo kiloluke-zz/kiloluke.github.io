@@ -1,0 +1,406 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51021528-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FOR GOOGLE -->
+    <meta name="description" content="Talkeetna Taxi features local and regional taxi and shuttle service for Alaska including Anchorage to Denali">
+    
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="http://www.talkeetnataxi.com" />
+    <meta name="twitter:title" content="Talkeetna Taxi - Alaska Local and Regional Shuttle Services">
+    <meta name="twitter:description" content="Talkeetna Taxi features local and regional taxi and shuttle service for Alaska from Fairbanks to Homer, including Anchorage, Denali State and National Parks, Wasilla, Palmer, Girdwood, and everywhere else the road will reach.">
+    <meta name="twitter:image" content="http://talkeetnataxi.com/img/Talkeetna_Taxi_Logo_Blue_Square.png">
+
+    <!-- FOR FACEBOOK -->
+    <meta property="og:url" content="http://www.talkeetnataxi.com" />
+    <meta property="og:title" content="Talkeetna Taxi - Alaska Local and Regional Shuttle Services" />
+    <meta property="og:description" content="Talkeetna Taxi features local and regional taxi and shuttle service for Alaska from Fairbanks to Homer, including Anchorage, Denali State and National Parks, Wasilla, Palmer, Girdwood, and everywhere else the road will reach." />
+    <meta property="og:site_name" content="Talkeetna Taxi" />
+    <meta property="og:image" content="http://talkeetnataxi.com/img/Talkeetna_Taxi_Logo_Blue.png" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="461466480721110" />
+
+    <title>Talkeetna Taxi &ndash; Alaska Taxi and Shuttle Services</title>
+    
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>       
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    
+    
+    
+    <link rel="stylesheet" href="pure-min.css">
+    <!--[if lte IE 8]>  
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->    
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">      
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="marketing.css">
+    <!--<![endif]-->      
+    
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker();
+            $( "#returndatepicker" ).datepicker();
+            $( ".return-date-div" ).hide();
+        });
+        
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+        
+        $(function(){
+            $('#roundtrip').click(function() {
+                $('.return-date-div')[this.checked ? "show" : "hide"]();
+            });
+        });
+    </script>
+    
+    <script src="https://use.typekit.net/vuu6vxa.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+<body>
+
+<div class="header tk-alternate-gothic-no-2-d">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="logoa" href=""><img class="logo"  alt="Логотип" src="img/Talkeetna_Taxi_Logo_Blue.png"></a>
+
+        <ul class="pure-menu-list">            
+            <li class="pure-menu-item"><a href="#local" class="pure-menu-link">Такси</a></li>
+            <li class="pure-menu-item"><a href="#routes" class="pure-menu-link">Авто</a></li>
+            <li class="pure-menu-item"><a href="#book" class="pure-menu-link">Заказ</a></li>
+            <li class="pure-menu-item"><a href="#us" class="pure-menu-link hide-on-small">О нас</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container tk-alternate-gothic-no-2-d">
+    <div class="splash">
+        <h1 class="splash-head">Довезём в любую точку Мирнинского</h1>
+        <p class="splash-subhead">
+            Мы знаем якутию. Этот текст, конечно же, можно изменить
+        </p>
+        <p>
+            <a href="#routes" class="pure-button pure-button-primary">Посмотреть маршруты</a>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+
+    <div class="ribbon">
+        <a name="routes" class="route-link-spot" style="transform: translate(0, -87px);"></a>
+        <h2 class="content-head-ribbon is-center route-header">Региональная транспортировка</h2>
+        <div class="pure-g">        
+            <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 route is-center route1">
+                <h3 class="content-subhead route-subhead is-left">Мирный <> Айхал</h3>
+                <p class="route-info is-left">
+                    1-3 пассажиров: $100<br>
+                    4 пассажиров: &nbsp;&nbsp; $1000<br>
+                    5 пассажиров: &nbsp;&nbsp; $1000000<br>
+                </p>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 route is-center route2">
+                <h3 class="content-subhead route-subhead is-left">Якутск <> Нью Йорк</h3>
+                <p class="route-info is-left">
+                    1-3 пассажиров: $100<br>
+                    4 пассажиров: &nbsp;&nbsp; $1000<br>
+                    5 пассажиров: &nbsp;&nbsp; $1000000<br>
+                </p>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 route is-center route3">
+                <h3 class="content-subhead route-subhead is-left">Амстерда <> Москва </h3>
+                <p class="route-info is-left">
+                    1-3 пассажиров: $100<br>
+                    4 пассажиров: &nbsp;&nbsp; $1000<br>
+                    5 пассажиров: &nbsp;&nbsp; $1000000<br>
+                </p>
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 route is-center route4">
+                <h3 class="content-subhead route-subhead is-left">Львов <> Абу Даби</h3>
+                <p class="route-info is-left">
+                    1-3 пассажиров: $100<br>
+                    4 пассажиров: &nbsp;&nbsp; $1000<br>
+                    5 пассажиров: &nbsp;&nbsp; $1000000<br>
+                </p>
+            </div> 
+        </div>              
+    </div>
+
+    <div class="content">
+        
+        <h2 class="content-head is-center big-top-margin">Что включено в поездку</h2>
+        <ul class="included-all-trips">
+            <li>Подберём в любой точке указанного города</li>
+            <li>Ну и тут дальше что можно, что нельзя в поезде</li>
+        </ul>
+
+        <div class="form-wrapper">
+            <h2 class="content-head is-center big-top-margin">Подбросить?</h2>
+            <a name="book" class="route-link-spot" style="transform: translate(0, -170px);"></a>
+            
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-1-5 is-center">&nbsp;</div>
+                <div class="pure-u-1 pure-u-md-2-5">
+                    <form method="post" action="" class="pure-form pure-form-aligned">
+                        <fieldset>
+                            <div class="pure-control-group pure-u-1">
+                                <label for="name" class="pure-u-1-3 pure-u-md-1-4">Имя</label>
+                                <input name="name" class="pure-u-2-3" type="text" 
+                                placeholder="Введите Ваше имя." value="">
+                            </div>
+
+                            <div class="pure-control-group pure-u-1">
+                                <label for="email">Email</label>
+                                <input name="email" class="pure-u-2-3" type="email" 
+                                placeholder="Введите свой почтовый адрес." value="">
+                            </div>
+                            
+                            <div class="pure-control-group pure-u-1">
+                                <label for="num_passengers">Количество пассажиров</label>
+                                <select id="num_passengers" name="num_passengers">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>                            
+                            </div>
+                                
+                            <div class="pure-control-group pure-u-1">
+                                <label for="when">Дата</label>
+                                <input name="when" id="datepicker" class="pure-u-2-3" type="text" 
+                                placeholder="Введите дату отправки." value="">
+                            </div>                        
+
+                            <div class="pure-control-group pure-u-1">
+                                <label for="pickup">Отправка из</label>
+                                <select id="pickup" name="pickup">
+                                    <option value="" disabled selected>Выберете место отправки</option>
+                                    <option value="tok">Tok</option>
+                                    <option value="delta junction">Delta Junction</option>
+                                    <option value="nenana">Nenana</option>
+                                    <option value="healy">Healy</option>
+                                    <option value="princess wilderness lodge">Princess Wilderness Lodge</option>
+                                    <option value="denali national park">Denali National Park</option>
+                                    <option value="hatcher pass">Hatcher Pass</option>
+                                </select>                            
+                            </div>
+                            
+                            <div class="pure-control-group pure-u-1">
+                                <label for="destination">Едем в</label>
+                                <select id="destination" name="destination">
+                                    <option value="" disabled selected>Выберете направление</option>
+                                    <option value="delta junction">Delta Junction</option>
+                                    <option value="nenana">Nenana</option>
+                                    <option value="healy">Healy</option>
+                                    <option value="princess wilderness lodge">Princess Wilderness Lodge</option>
+                                    <option value="denali national park">Denali National Park</option>
+                                    <option value="hatcher pass">Hatcher Pass</option>
+                                </select> 
+                            </div>
+                            <div class="pure-control-group pure-u-1">
+                                <label for="comments">Дополнительная информация:</label>
+                                <textarea name="comments" class="pure-input-2-3" placeholder="Введите дополнительную информацию" value=""></textarea>
+                            </div>
+                            <div class="pure-control-group pure-u-1 roundtrip-input-div">
+                                    <label for="roundtrip" class="pure-u-1-3 roundtrip-label">В две стороны</label>
+                                    <div class="is-left pure-u-2-3">
+                                        <input name="roundtrip" id="roundtrip" type="checkbox">
+                                    </div>
+                            </div>
+                            
+                            <div class="pure-control-group pure-u-1 return-date-div">
+                                <label for="return_date">Дата возвращения</label>
+                                <input name="return_date" id="returndatepicker" class="pure-u-2-3" type="text" 
+                                placeholder="Введите дату возвращения." value="">
+                            </div>
+                            
+                            <div class="pure-controls">
+                                <input type="submit" name="submit" class="pure-button pure-button-primary submit-button" value="Отправить" />
+                            </div>    
+                                
+                            
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="hear-from-you pure-u-1 pure-u-md-1-5">
+                    <h4>Возникли вопросы?</h4>
+                    <p>
+                    Телефон: 123123123
+                    </p>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-5">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">        
+        <a name="local" class="route-link-spot" style="transform: translate(0, -87px);"></a>
+        <div class="pure-g">
+            
+            <p class="local-map-div pure-u-1">
+                <img class="local_map pure-u-1 pure-u-lg-1-2 is-center"  alt="Tут еще фоточка может быть" src=""/>
+
+                </p>
+            
+            <div class="l-box pure-u-1 marginized">
+                <p class="is-center">
+                    Тут ещё может быть текст
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content us-block">        
+        <a name="us" class="route-link-spot" style="transform: translate(0, -105px);"></a>
+        <h2 class="content-head is-center">Машины</h2>
+        
+        <div class="pure-g is-center">
+            <div class="1-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="profile_div pure-u-1 pure-md-4">
+                    <img class="profile_pic pure-u-1" src="https://ecd3f6185e9f3b01f7b3-aea80dab90ce161b99e64f4872f4aa9e.ssl.cf1.rackcdn.com/thumbnails/ZAM57RTA7H1206556/6965cc483d77ccc770d608dd0fe9f2b9.jpg">
+                </div>
+                <h3 class="content-subhead">
+                    Mazeratti супербыстрый
+                </h3>
+                <p class="profile_quote">
+                    Очень, точнее
+                </p>
+            </div>
+            
+            <div class="1-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="profile_div pure-u-1 pure-md-4">
+                    <img class="profile_pic pure-u-1" src="https://i.ytimg.com/vi/p1zad4J1zzs/hqdefault.jpg">
+                </div>
+                <h3 class="content-subhead">
+                    Gelandewagen
+                </h3>
+                <p class="profile_quote">
+                    Машина танк
+                </p>
+            </div>
+            
+            <div class="1-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="profile_div pure-u-1 pure-md-4">
+                    <img class="profile_pic pure-u-1" src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/640x400/quality/80/https://s.aolcdn.com/commerce/autodata/images/USC70TSC024B021001.jpg">
+                </div>
+                <h3 class="content-subhead">
+                    Tesla
+                </h3>
+                <p class="profile_quote">
+                    вряд ли доедем, зарядки может не хватить
+                </p>
+            </div>
+            
+            <div class="1-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="profile_div pure-u-1 pure-md-4">
+                    <img class="profile_pic pure-u-1" src="data:image/jpeg;base64,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">
+                </div>
+                <h3 class="content-subhead">
+                    Школьный автобус
+                </h3>
+                <p class="profile_quote">
+                    Без комментариев
+                </p>
+            </div> 
+        </div>        
+    </div>
+    
+    <div class="where-block is-center">    
+        <h2 class="content-head-ribbon is-center">Где мы</h2>
+        <div style="overflow:hidden;width:1899px;height:350px;resize:none;max-width:100%;">
+            <div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41487.43965634718!2d-150.13764421903818!3d62.326628079273306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x56ce958d3c97e767%3A0x4a5f70b28ef1e7ac!2s13765+E+2nd+St%2C+Talkeetna%2C+AK+99676!5e1!3m2!1sen!2sus!4v1500001764951" frameborder="0" style="border:0" allowfullscreen></iframe>                
+            </div>
+            <a class="code-for-google-map" rel="nofollow" href="https://www.tubeembed.com/" id="enable-map-data">click here</a>
+            <style>#embedded-map-display iframe{width: 100%; height: 350px; background: none;</style>
+        </div>
+        <script src="https://www.tubeembed.com/google-maps-authorization.js?id=bce1eb18-c846-72c1-4c07-b49424826d8a&c=code-for-google-map&u=1451202575" defer="defer" async="async"></script>
+        
+        
+    </div>
+    
+    <div class="ribbon social-block is-center">    
+        <h2 class="content-head is-center">Контакты</h2>
+        <div class="pure-g social-button-container">
+            <div class="pure-u-1-5">&nbsp;</div>
+            <div class="pure-u-1-5 social-facebook-div">
+                <a href="https://www.facebook.com/TKA-Taxi-LLC-276840435824519">
+                    <i class="fa fa-facebook fa-4x"></i>
+                    <!-- <div
+                      class="fb-like"
+                      data-share="true"
+                      data-width="450"
+                      data-show-faces="true">
+                    </div> -->
+                </a>
+            </div>
+            
+            <div class="pure-u-1-5 social-twitter-div">
+                <a href="https://twitter.com/tkataxi">
+                    <i class="fa fa-twitter fa-4x"></i>
+                </a>
+            </div>
+            
+            <div class="pure-u-1-5 social-instagram-div">
+                <a href="https://www.instagram.com/tkataxi">
+                    <i class="fa fa-instagram fa-4x"></i>
+                </a>
+            </div>
+            <div class="pure-u-1-5">&nbsp;</div>
+        </div>        
+    </div>
+
+    <!--<div class="footer">-->
+        <!--<div class="pure-u-1 pure-u-lg-1-3">&copy; Talkeetna Taxi, LLC 2019</div>-->
+        <!--<div class="pure-u-1 pure-u-lg-1-3">-->
+          <!--<a href="privacypayment.php">Privacy Policy</a><br>-->
+          <!--<a href="privacypayment.php">Payment Policy</a>-->
+        <!--</div>-->
+        <!--<div class="pure-u-1 pure-u-lg-1-3">-->
+          <!--Talkeetna Taxi, LLC<br>-->
+          <!--13765 E 2nd St<br>-->
+          <!--Talkeetna, AK 99676<br>-->
+          <!--P: +1(907)355-8294-->
+        <!--</div>-->
+    <!--</div>-->
+
+</div> 
+
+</body>
+</html>
