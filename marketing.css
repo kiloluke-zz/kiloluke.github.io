@@ -134,9 +134,6 @@ div.us-block {
 }
 
 div.us-block  div.profile_div {
-    border-radius:50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     height:200px;
     width:200px;
     overflow:hidden;
@@ -384,6 +381,7 @@ a.pure-button-primary {
 .splash-container {
     background: #1f8dd6;
     background-image: url('xrcLF8yDamI1.jpg');
+    /*background-image: url("http://www.talkeetnataxi.com/img/Alaska_Road_Winding_Through_Mountains_Taller.jpg");*/
     /*background-image: url("http://www.talkeetnataxi.com/img/Alaska_Road_Winding_Through_Mountains_Taller.jpg");*/
     background-size: auto 100%;
     background-position: center center;
